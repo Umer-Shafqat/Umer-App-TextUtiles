@@ -29,8 +29,6 @@ const handleextraspace = () => {
     let newtext = text.split(/[ ]+/).join(" ");
     setText(newtext);
 }
-
-
   return (
     <>
     <div className="container" style={{color:prop.mode === "dark" ? 'wheat' : 'grey'}}>
@@ -50,7 +48,7 @@ const handleextraspace = () => {
      <p>{text.split(" ").length-1} words and {text.length} characters </p>
      <p>{0.008 * (text.split(" ").length-1)} minutes read</p>
      <h2>Preview</h2>
-     <p>{text}</p>
+     <p>{text.length>0 ? text : "Nothing to preview!"}</p>
     </div>
     </>
   )
