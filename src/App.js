@@ -7,12 +7,13 @@ import React,{useState} from 'react';
 
 function App() {
   const [Mode,setMode] = useState("light");
-
+  
   const toggleMode = () => {
     if (Mode === "light") {
       setMode("dark"); // dark background
     } else {
       setMode("light");
+      
     }
   };
   return (
