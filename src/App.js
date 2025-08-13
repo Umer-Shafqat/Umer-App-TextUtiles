@@ -10,14 +10,14 @@ function App() {
 
   const toggleMode = () => {
     if (Mode === "light") {
-      setMode("dark");
+      setMode("dark"); // dark background
     } else {
       setMode("light");
     }
   };
   return (
     <>
-      <NAVBAR title="Textutils" aboutText="About Textutils" mode={Mode} togglemode={toggleMode}/>
+      <NAVBAR title="Textutils" aboutText="About Textutils" mode={Mode}  togglemode={toggleMode}/>
       {/* <About /> */}
       <div className="container">
         <TextForm heading="Enter Text Below"/>
