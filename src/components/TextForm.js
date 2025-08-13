@@ -25,6 +25,12 @@ const clear = () => {
 
   const [text,setText] = useState("");
 
+const handleextraspace = () => {
+    let newtext = text.split(/[ ]+/).join(" ");
+    setText(newtext);
+}
+
+
   return (
     <>
     <div className='container'>
@@ -35,6 +41,7 @@ const clear = () => {
       <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
       <button className="btn btn-primary mx-2" onClick={handleLowClick}>Convert to LowerCase</button>
       <button className="btn btn-primary mx-2" onClick={handlefirstclick}>Convert to First Capital</button>
+      <button className="btn btn-primary mx-2" onClick={handleextraspace}>Remove extra Spaces</button>
       <button className="btn btn-primary mx-2" onClick={clear}>Clear</button>
     </div>
 
