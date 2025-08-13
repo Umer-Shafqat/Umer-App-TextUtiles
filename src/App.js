@@ -11,9 +11,12 @@ function App() {
   const toggleMode = () => {
     if (Mode === "light") {
       setMode("dark"); // dark background
+      document.body.style.backgroundColor = "black"; // dark background
+      document.body.style.color = "white"; // light text color
     } else {
       setMode("light");
-      
+      document.body.style.backgroundColor = "white"; // light background
+      document.body.style.color = "black"; // dark text color
     }
   };
   return (
