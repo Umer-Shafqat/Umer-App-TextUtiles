@@ -4,10 +4,12 @@ export default function TextForm(prop) {
   const handleUpClick = () => { 
     let newtext=text.toUpperCase();
     setText(newtext);
+    prop.showAlert("Converted to Uppercase!", "success");
   }
    const handleLowClick = () => { 
     let newtext=text.toLowerCase();
     setText(newtext);
+    prop.showAlert("Converted to Lowercase!", "success");
   }
     const handleOnChange = (event) => {
         setText(event.target.value);
@@ -28,6 +30,7 @@ const clear = () => {
 const handleextraspace = () => {
     let newtext = text.split(/[ ]+/).join(" ");
     setText(newtext);
+    prop.showAlert("Removed extra spaces!", "success");
 }
   return (
     <>
